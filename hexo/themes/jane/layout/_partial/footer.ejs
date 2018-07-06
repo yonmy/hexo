@@ -1,9 +1,11 @@
 <footer id="footer">
   <% if (theme.sidebar === 'bottom'){ %>
     <%- partial('_partial/sidebar') %>
-  <% } %>
+	<% } %>
+	<% var thisyear = date(new Date(), 'YYYY'); %>
 	<div id="footer-info" class="inner">
-	  &copy; <%= date(new Date(), 'YYYY') %> <%= config.author || config.title %> 
+		&copy; 
+		<% if (theme.startyear != thisyear){ %> <%= theme.startyear %> - <% } %> <%= thisyear %> <%= config.author || config.title %> 
 	  - Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
 	  - Theme <a href="https://github.com/hejianxian/hexo-theme-jane/" target="_blank">Jane</a>
 	</div>

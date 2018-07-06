@@ -13,3 +13,6 @@ fancybox: true
 # Miscellaneous
 google_analytics:
 favicon: /favicon.png
+
+# Copyright Infomation
+startyear: 2016
