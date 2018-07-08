@@ -1,0 +1,8 @@
+<%- partial('_partial/article', {post: page, type: 'page'}) %>
+<% if (page.prev){ %>
+    <%- partial('_partial/article', {post: page.prev, type: 'prev'}) %>
+<% } %>
+<% if (page.next){ %>
+    <%- partial('_partial/article', {post: page.next, type: 'next'}) %>
+<% } %>
+<%- partial('_partial/moment') %>

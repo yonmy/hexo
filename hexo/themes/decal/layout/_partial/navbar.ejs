@@ -1,0 +1,9 @@
+<div id="navbar">
+<% for (var i in theme.menu) { %>
+  <% if (is_current(theme.menu[i])) { %>
+  <a class="active" href="javascript:void(0)"><%= i%></a>
+  <% } else { var link = url_for(theme.menu[i]); %>
+  <a href="<%- link %>"<%- link.search('^.?/') ? ' target=\"_blank\"' : ''%>><%= i%></a>
+  <% } %>
+<% } %>
+</div>

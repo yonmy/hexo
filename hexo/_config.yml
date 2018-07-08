@@ -77,7 +77,7 @@ excerpt_depth: 2
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: jane
+theme: decal
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html

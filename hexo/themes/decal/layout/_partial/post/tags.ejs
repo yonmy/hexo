@@ -1,0 +1,4 @@
+<i class="fas fa-tags"></i> 
+<% tags.forEach(function(tag){ %>
+<a class="tags-item" href="<%= url_for(tag.path) %>"><%= tag.name %></a>
+<% }) %>

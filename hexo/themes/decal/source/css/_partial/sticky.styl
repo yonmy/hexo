@@ -1,0 +1,28 @@
+#navbar
+  overflow: hidden
+  background-color: #191919
+  a
+    float: left
+    display: block
+    color: #fff
+    text-align: center
+    padding: 15px 16px
+    text-decoration: none
+    font-size: 13px
+    font-family: Tahoma, Verdana, Segoe, sans-serif
+    &:hover
+      color: #dfe2db
+  a.active
+    color: #fff056
+
+.content
+  height: 100%
+  width: 100%
+
+.sticky
+  position: fixed
+  top: 0
+  width: 100%
+
+.sticky + .content
+  padding-top: 60px

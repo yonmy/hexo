@@ -1,0 +1,15 @@
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      var timeElements = document.querySelectorAll('time')
+      timeElements.forEach(function(element) {
+        var value = element.getAttribute('datetime');
+        if (value) {
+          element.innerHTML = moment(value).fromNow();
+        }
+        var title = element.getAttribute('title');
+        if (title) {
+          element.setAttribute('title', moment(value).calendar());
+        }
+      });
+    })
+</script>

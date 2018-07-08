@@ -1,0 +1,17 @@
+<% if (type == 'index') { %>
+  <i class="fas fa-envelope"></i> 
+<% } else if (type == 'page') { %>
+  <i class="fas fa-envelope-open"></i> 
+<% } else if (type == 'prev') { %>
+  <i class="fas fa-arrow-alt-circle-left"></i> 
+<% } else if (type == 'next') { %>
+  <i class="fas fa-arrow-alt-circle-right"></i> 
+<% } else {
+}
+if (post.link) { %>
+  <a class="<%= class_name %>" href="<%- url_for(post.link) %>" target="_blank" itemprop="url"><%= post.title %></a>
+<% } else if (type != 'page') { %>
+  <a class="<%= class_name %>" href="<%- url_for(post.path) %>"><%= post.title %></a>
+<% } else { %>
+  <%= post.title %>
+<% } %>

@@ -1,0 +1,23 @@
+<footer class="footer">
+  <% if (theme.sidebar === 'bottom'){ %>
+    <%- partial('_partial/sidebar') %>
+	<% } %>
+	<% var thisyear = date(new Date(), 'YYYY'); %>
+	<table id="table-fit">
+		<tr>
+			<th>
+				&copy; 
+				<% if (theme.startyear && theme.startyear != thisyear){ %> <%= theme.startyear %> - <% } %> <%= thisyear %> <%= config.author || config.title %>
+			</th>
+			<th>
+				<%= __('powered_by') %> <a href="http://hexo.io/" target="_blank">Hexo</a>
+			</th>
+		</tr>
+		<tr>
+			<th></th>
+			<th>
+				<%= __('theme_by') %> <a href="https://github.com/yonmy/" target="_blank">Decal</a>
+			</th>
+		</tr>
+	</table>
+</footer>
